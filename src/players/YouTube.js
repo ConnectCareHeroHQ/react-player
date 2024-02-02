@@ -76,7 +76,7 @@ export default class YouTube extends Component {
         ...embedOptions
       })
 
-      const iframeElement = document.getElementById("widget2")
+      const iframeElement = document.querySelector("#sandbox-id")
       iframeElement.sandbox = "allow-scripts allow-same-origin allow-presentation"
       iframeElement.src = iframeElement.src
     }, onError)
@@ -200,7 +200,7 @@ export default class YouTube extends Component {
     }
     return (
       <div style={style}>
-        <div ref={this.ref} />
+        <div id="sandbox-id" ref={this.ref} />
       </div>
     )
   }
